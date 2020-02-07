@@ -13,10 +13,11 @@ const makeTransaction = (transaction) => {
 
     if (canProcess) {
       resolve([transaction.id, delay]);
+      return
   
-    } else {
+    } 
       reject(transaction.id);
-    }
+    
   }, delay)})};
 
 const logSuccess = ([id, time]) => {
